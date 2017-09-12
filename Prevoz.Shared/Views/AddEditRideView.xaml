@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Prevoz.AddEditRideView"
+	xmlns:l="clr-namespace:Prevoz">
+	<ContentPage.Content>
+		<ScrollView>
+			<Grid Padding="7"
+				RowSpacing="4"
+				x:Name="grid">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<ContentView Grid.ColumnSpan="2"
+					Margin="0,-10,0,0">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="StartLocation_Tapped" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label FontSize="Medium"
+					Text="Od:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="StartLocation_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<l:CityLabel Grid.Column="1"
+					x:Name="StartLocation"
+					FontSize="Large"
+					HorizontalOptions="StartAndExpand"
+					HorizontalTextAlignment="Start"
+					VerticalOptions="Center"
+					VerticalTextAlignment="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="StartLocation_Tapped" />
+					</Label.GestureRecognizers>
+				</l:CityLabel>
+				<ContentView Grid.Row="1"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="EndLocation_Tapped" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="1"
+					FontSize="Medium"
+					Text="Do:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="EndLocation_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<l:CityLabel Grid.Row="1"
+					Grid.Column="1"
+					x:Name="EndLocation"
+					FontSize="Large"
+					HorizontalOptions="StartAndExpand"
+					HorizontalTextAlignment="Start"
+					VerticalOptions="Center"
+					VerticalTextAlignment="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="EndLocation_Tapped" />
+					</Label.GestureRecognizers>
+				</l:CityLabel>
+				<ContentView Grid.Row="2"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Date_Tapped" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="2"
+					FontSize="Medium"
+					Text="Dan:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Date_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<Label Grid.Row="2"
+					Grid.Column="1"
+					x:Name="DateLabel"
+					FontSize="Large"
+					HorizontalOptions="StartAndExpand"
+					HorizontalTextAlignment="Start"
+					VerticalOptions="Center"
+					VerticalTextAlignment="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Date_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<ContentView Grid.Row="3"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Time_Tapped" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="3"
+					FontSize="Medium"
+					Text="Ura:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Time_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<Label Grid.Row="3"
+					Grid.Column="1"
+					x:Name="TimeLabel"
+					FontSize="Large"
+					HorizontalOptions="StartAndExpand"
+					HorizontalTextAlignment="Start"
+					VerticalOptions="Center"
+					VerticalTextAlignment="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Time_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<ContentView Grid.Row="4"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="PassangersCountLabel_Tapped" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="4"
+					FontSize="Medium"
+					Text="Oseb:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="PassangersCountLabel_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<Label Grid.Row="4"
+					Grid.Column="1"
+					x:Name="PassangersCountLabel"
+					FontSize="Large"
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="PassangersCountLabel_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<ContentView Grid.Row="5"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Costs_Tapped" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="5"
+					FontSize="Medium"
+					Text="Strošek:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Costs_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<Label Grid.Row="5"
+					Grid.Column="1"
+					x:Name="CostsLabel"
+					FontSize="Large"
+					HorizontalOptions="FillAndExpand"
+					HorizontalTextAlignment="Start"
+					VerticalOptions="Center"
+					VerticalTextAlignment="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Costs_Tapped" />
+					</Label.GestureRecognizers>
+				</Label>
+				<ContentView Grid.Row="6"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Focus_TelEntry" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="6"
+					FontSize="Medium"
+					Text="Tel:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Focus_TelEntry" />
+					</Label.GestureRecognizers>
+				</Label>
+				<Entry Grid.Row="6"
+					Grid.Column="1"
+					x:Name="TelEntry"
+					Keyboard="Telephone"
+					FontSize="Large"
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="Center" />
+				<ContentView Grid.Row="7"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Focus_CarInfoEntry" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="7"
+					FontSize="Medium"
+					Text="Avto:"
+					HorizontalOptions="Start"
+					VerticalOptions="Center">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Focus_CarInfoEntry" />
+					</Label.GestureRecognizers>
+				</Label>
+				<Entry Grid.Row="7"
+					Grid.Column="1"
+					x:Name="CarInfoEntry"
+					FontSize="Large"
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="Center" />
+				<StackLayout Orientation="Horizontal"
+					Grid.Row="8"
+					Grid.ColumnSpan="2">
+					<Label FontSize="Medium"
+						Text="Zavarovanje sopotnikov:"
+						HorizontalOptions="Start"
+						VerticalOptions="Center" />
+					<Switch x:Name="InsuredSwitch"
+						VerticalOptions="Center" />
+				</StackLayout>
+				<ContentView Grid.Row="9"
+					Grid.ColumnSpan="2">
+					<ContentView.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Focus_CommentsEditor" />
+					</ContentView.GestureRecognizers>
+				</ContentView>
+				<Label Grid.Row="9"
+					FontSize="Medium"
+					Text="Opombe:"
+					HorizontalOptions="Start">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Focus_CommentsEditor" />
+					</Label.GestureRecognizers>
+				</Label>
+				<Editor Grid.Row="10"
+					Grid.ColumnSpan="2"
+					x:Name="CommentsEditor"
+					FontSize="Large"
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="FillAndExpand" />
+				<Button Grid.Row="11"
+					Grid.ColumnSpan="2"
+					x:Name="okButton"
+					FontSize="Large"
+					TextColor="#3498DB"
+					HorizontalOptions="Center"
+					BackgroundColor="Transparent"
+					Clicked="Handle_Clicked" />
+			</Grid>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,5 @@
+/Users/davidkarlas/GIT/Prevoz/Prevoz.UITest/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/davidkarlas/GIT/Prevoz/Prevoz.UITest/bin/Release/Prevoz.UITest.dll
+/Users/davidkarlas/GIT/Prevoz/Prevoz.UITest/obj/Release/Prevoz.UITest.dll
+/Users/davidkarlas/GIT/Prevoz/Prevoz.UITest/bin/Release/nunit.framework.dll
+/Users/davidkarlas/GIT/Prevoz/Prevoz.UITest/bin/Release/Xamarin.UITest.dll

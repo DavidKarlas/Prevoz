@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Prevoz.RidesResultsPage"
+    xmlns:l="clr-namespace:Prevoz">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <l:MoneyConverter x:Key="moneyConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <ListView x:Name="listView"
+                IsVisible="false"
+                ItemTapped="listItemTapped"
+                IsGroupingEnabled="true"
+                GroupDisplayBinding="{Binding Key}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="10,3">
+                                <Label Grid.RowSpan="2"
+                                    FontSize="Large"
+                                    VerticalTextAlignment="Center"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding DateAndTime, StringFormat='{0:HH:mm}'}" />
+                                <Label Grid.Column="1"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Start"
+                                    FontSize="Medium"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding Price, Converter={StaticResource moneyConverter}}" />
+                                <Label Grid.Row="1"
+                                    Grid.Column="1"
+                                    HorizontalOptions="End"
+                                    FontSize="Small"
+                                    VerticalOptions="End"
+                                    VerticalTextAlignment="End"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding Author}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator x:Name="loadingIndicator"
+                IsVisible="true"
+                IsRunning="true"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

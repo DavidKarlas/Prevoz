@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Prevoz.RideDetailsPage"
+	xmlns:l="clr-namespace:Prevoz">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<l:MoneyConverter x:Key="moneyConverter" />
+			<l:DateConverter x:Key="dateConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<Grid HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+            x:Name="grid"
+			Padding="10">
+            <Grid.RowDefinitions>
+				<!--From-To-->
+				<RowDefinition Height="Auto" />
+				<!--Splitter-->
+				<RowDefinition Height="Auto" />
+				<!--Date-->
+				<RowDefinition Height="Auto" />
+				<!--Time-->
+				<RowDefinition Height="Auto" />
+				<!--People-->
+				<RowDefinition Height="Auto" />
+				<!--Phone-->
+				<RowDefinition Height="Auto" />
+                <!--Costs-->
+                <RowDefinition Height="Auto" />
+                <!--Car info-->
+                <RowDefinition Height="Auto" />
+				<!--Comment-->
+				<RowDefinition Height="*" />
+				<!--Buttons-->
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="30" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<l:FlowLayout Grid.Row="0"
+				Grid.Column="0"
+				Grid.ColumnSpan="2">
+				<Label Text="{Binding From}"
+					FontSize="Large">
+				</Label>
+				<Label Text="{Binding To}"
+					FontSize="Large"
+					XAlign="End">
+				</Label>
+			</l:FlowLayout>
+			<BoxView Grid.Row="1"
+				Grid.Column="0"
+				Grid.ColumnSpan="2"
+				Color="Blue"
+				HeightRequest="1">
+			</BoxView>
+			<Image Grid.Row="2"
+				Grid.Column="0"
+				Source="calendar.png"
+				VerticalOptions="Center"
+				HorizontalOptions="Center" />
+			<Label Grid.Row="2"
+				Grid.Column="1"
+				VerticalOptions="Center"
+				Text="{Binding DateAndTime, Converter={StaticResource dateConverter}}">
+			</Label>
+			<Image Grid.Row="3"
+				Grid.Column="0"
+				Source="clock.png"
+				VerticalOptions="Center"
+				HorizontalOptions="Center" />
+			<Label Grid.Row="3"
+				Grid.Column="1"
+				VerticalOptions="Center"
+				Text="{Binding DateAndTime, StringFormat='{0:HH:mm}'}">
+			</Label>
+			<Image Grid.Row="4"
+				Grid.Column="0"
+				Source="people.png"
+				VerticalOptions="Center"
+				HorizontalOptions="Center" />
+			<Label Grid.Row="4"
+				Grid.Column="1"
+				VerticalOptions="Center"
+				Text="{Binding NumPeople}">
+			</Label>
+			<Image Grid.Row="5"
+				Grid.Column="0"
+				Source="telephone.png"
+				VerticalOptions="Center"
+				HorizontalOptions="Center" />
+			<Label Grid.Row="5"
+				Grid.Column="1"
+				VerticalOptions="Center"
+				Text="{Binding Contact}">
+			</Label>
+			<Image Grid.Row="6"
+				Grid.Column="0"
+				Source="piggybank.png"
+				VerticalOptions="Center"
+				HorizontalOptions="Center" />
+			<Label Grid.Row="6"
+				Grid.Column="1"
+				VerticalOptions="Center"
+				Text="{Binding Price, Converter={StaticResource moneyConverter}}">
+			</Label>
+            <Image Grid.Row="7"
+                Grid.Column="0"
+                Source="car.png"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            <Label Grid.Row="7"
+                Grid.Column="1"
+                VerticalOptions="Center"
+                Text="{Binding CarInfo}">
+            </Label>
+			<Image Grid.Row="8"
+				Grid.Column="0"
+				Source="comment.png"
+				VerticalOptions="Start"
+				HorizontalOptions="Center" />
+			<ScrollView Grid.Row="8"
+				Grid.Column="1">
+				<Label Text="{Binding Comment}">
+				</Label>
+			</ScrollView>
+			<StackLayout Orientation="Horizontal"
+				Grid.Row="9"
+				Grid.Column="0"
+				Grid.ColumnSpan="2">
+				<Button x:Name="leftButton"
+					Clicked="leftButtonClicked"
+					HorizontalOptions="CenterAndExpand"
+					VerticalOptions="Center">
+				</Button>
+				<Button x:Name="rightButton"
+					Clicked="rightButtonClicked"
+					HorizontalOptions="CenterAndExpand"
+					VerticalOptions="Center">
+				</Button>
+			</StackLayout>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

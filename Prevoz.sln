@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25029.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prevoz.iOS", "Prevoz.iOS\Prevoz.iOS.csproj", "{816846D5-6CEA-4A30-813F-AF0A0EE1F441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prevoz.Droid", "Prevoz.Droid\Prevoz.Droid.csproj", "{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prevoz.UITest", "Prevoz.UITest\Prevoz.UITest.csproj", "{E628A191-8240-49F4-93BB-203A6B2B6732}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Prevoz.Shared", "Prevoz.Shared\Prevoz.Shared.shproj", "{F0561E3D-2CD7-44DC-822A-96D37BD175A0}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Prevoz.Shared\Prevoz.Shared.projitems*{bf5a0c08-56f1-4fd7-9729-5714a784ee6f}*SharedItemsImports = 4
+		Prevoz.Shared\Prevoz.Shared.projitems*{fd3f99b6-df5c-436d-887e-cf8832df2e3d}*SharedItemsImports = 4
+		Prevoz.Shared\Prevoz.Shared.projitems*{816846d5-6cea-4a30-813f-af0a0ee1f441}*SharedItemsImports = 4
+		Prevoz.Shared\Prevoz.Shared.projitems*{f0561e3d-2cd7-44dc-822a-96d37bd175a0}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|iPhone = Debug|iPhone
+		Release|Any CPU = Release|Any CPU
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Debug|iPhone.Build.0 = Debug|iPhone
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Release|iPhone.ActiveCfg = Release|iPhone
+		{816846D5-6CEA-4A30-813F-AF0A0EE1F441}.Release|iPhone.Build.0 = Release|iPhone
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{FD3F99B6-DF5C-436D-887E-CF8832DF2E3D}.Release|iPhone.Build.0 = Release|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{E628A191-8240-49F4-93BB-203A6B2B6732}.Release|iPhone.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.EolMarker = Unix
+		$1.scope = text/x-csharp
+		$0.XmlFormattingPolicy = $2
+		$2.DefaultFormat = $3
+		$3.MaxAttributesPerLine = 1
+		$2.scope = application/xml
+		$0.StandardHeader = $4
+		$0.CSharpFormattingPolicy = $5
+		$5.scope = text/x-csharp
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

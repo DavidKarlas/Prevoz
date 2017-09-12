@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Prevoz.MyRidesPage"
+    xmlns:l="clr-namespace:Prevoz">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <l:MoneyConverter x:Key="moneyConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="AddButton"
+            Activated="ToolBarAddClick"
+            Order="Primary"
+            Text="Dodaj"
+            Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <ListView x:Name="listView"
+                HasUnevenRows="true"
+                ItemTapped="listItemTapped"
+                IsGroupingEnabled="true"
+                IsPullToRefreshEnabled="true"
+                Refreshing="Handle_Refreshing"
+                ItemsSource="{Binding Items}"
+                GroupDisplayBinding="{Binding Key}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout HorizontalOptions="FillAndExpand"
+                                    Spacing="0">
+                                    <Label FontSize="Small"
+                                        VerticalOptions="Start"
+                                        Text="{Binding Relation}" />
+                                    <Label FontSize="Large"
+                                        VerticalTextAlignment="Start"
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        Text="{Binding DateAndTime, StringFormat='{0:HH:mm}'}" />
+                                </StackLayout>
+                                <Label HorizontalOptions="End"
+                                    FontSize="Medium"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding Price, Converter={StaticResource moneyConverter}}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
